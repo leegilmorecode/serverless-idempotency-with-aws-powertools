@@ -1,0 +1,39 @@
+{
+  "info": {
+    "_postman_id": "922a9e94-db73-4f2c-abbe-0c3e16c632b4",
+    "name": "Serverless Idempotency",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Book Appointment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doctor\": {\n    \"name\": \"Dr. Smith\",\n    \"specialty\": \"Cardiology\"\n  },\n  \"patient\": {\n    \"name\": \"John Doe\",\n    \"dob\": \"1985-05-20\"\n  },\n  \"appointmentDateTime\": \"2023-02-10T14:00:00.000Z\",\n  \"notes\": \"Patient complains of chest pain. Additional tests may be required.\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.execute-api.eu-west-1.amazonaws.com/prod/appointments/",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "eu-west-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "appointments", ""]
+        }
+      },
+      "response": []
+    }
+  ]
+}
